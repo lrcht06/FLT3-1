@@ -64,7 +64,7 @@ This portfolio demonstrates the application of MySQL SELECT Clauses to query and
 
 ## SQL Copy (File)
 > 📂 
-[L.E.Turla (Finals Lab Task 3-1 Coding)](./files/L.E.Turla(FLT3-1_Code).sql)
+[L.E.Turla (Finals Lab Task 3-1 Code)](./files/L.E.Turla%20(FLT3-1_Code).sql)
 
 ---
 
