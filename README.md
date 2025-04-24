@@ -1,4 +1,4 @@
-# Finals Lab Task 3-1
+# Finals Lab Task 3-1: Using MySQL Clause
 This portfolio demonstrates the application of MySQL SELECT Clauses to query and retrieve data from a relational database. The task builds upon a predefined database structure and focuses on extracting meaningful insights using various SELECT statement features.
 
 ---
