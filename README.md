@@ -1,3 +1,5 @@
+---
+
 # Finals Lab Task 3-1
 This portfolio demonstrates the application of MySQL SELECT Clauses to query and retrieve data from a relational database. The task builds upon a predefined database structure and focuses on extracting meaningful insights using various SELECT statement features.
 
@@ -10,8 +12,8 @@ This portfolio demonstrates the application of MySQL SELECT Clauses to query and
 ### STEP 2. Open MySQL Workbench or phpMyAdmin and download/import the onlineCourse.sql file to initialize the tables and data.
 
 ### STEP 3. Create and select the working database:
-- Create a database named online_courseDB
-- Use the database created
+- #### Create a database named online_courseDB
+- #### Use the database created
 
 ### STEP 4. Import the provided initial SQL structure (onlineCourse.sql) into the online_courseDB to load the necessary tables and sample data.
 
