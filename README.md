@@ -54,7 +54,7 @@ This portfolio demonstrates the application of MySQL SELECT Clauses to query and
 - ### Table 1
 ![screenshot](images/FLT3-1(tbl1).png)
 - ### Table 2
-![screenshot](images/FLT3-1(tbl1).png)
+![screenshot](images/FLT3-1(tbl2).png)
 - ### Table 3
 ![screenshot](images/FLT3-1(tbl3).png)
 - ### Table 4
