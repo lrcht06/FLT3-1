@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Finals Lab Task 3-1: MySQL SELECT Clauses</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - MySQL Lab Task 3-1</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="assets/bg-music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+    <audio autoplay loop>
+        <source src="assets/bg-music.mp3" type="audio/mpeg">
+    </audio>
 
-  <div class="stars"></div>
-  <div class="twinkling"></div>
-  <div class="content">
-    <h1> Finals Lab Task 3-1: Using MySQL Clause</h1>
-    <p>This portfolio demonstrates the application of <strong>MySQL SELECT Clauses</strong> to query and retrieve data from a relational database.</p>
+    <div class="container">
+        <header>
+            <h1>Finals Lab Task 3-1: Using MySQL Clause</h1>
+            <p>This portfolio demonstrates the application of MySQL SELECT Clauses to query and retrieve data from a relational database...</p>
+        </header>
 
-    <h2> STEP BY STEP PROCESS</h2>
-    <h3> STEP 1.</h3>
-    <p>Launch MySQL Workbench or phpMyAdmin and start XAMPP to activate MySQL.</p>
+        <section class="process">
+            <h2>Step by Step Process</h2>
+            <p>Follow the instructions below:</p>
+            <ul>
+                <li>STEP 1. Launch MySQL Workbench or phpMyAdmin...</li>
+                <li>STEP 2. Open MySQL Workbench...</li>
+                <li>STEP 3. Create and select the working database...</li>
+            </ul>
+        </section>
 
-    <h3> STEP 2.</h3>
-    <p>Download/import <code>onlineCourse.sql</code> to initialize the tables and data.</p>
+        <section class="tasks">
+            <h2>Tasks & Query Statements</h2>
+            <h3>Task 1 – Retrieve all courses...</h3>
+            <img src="images/FLT3-1(T1).png" alt="Task 1 Screenshot">
+            <h3>Task 2 – Group courses...</h3>
+            <img src="images/FLT3-1(T2).png" alt="Task 2 Screenshot">
+            <h3>Task 3 – Retrieve fully enrolled courses...</h3>
+            <img src="images/FLT3-1(T3).png" alt="Task 3 Screenshot">
+            <h3>Task 4 – Calculate total students enrolled...</h3>
+            <img src="images/FLT3-1(T4).png" alt="Task 4 Screenshot">
+            <h3>Task 5 – Sort courses...</h3>
+            <img src="images/FLT3-1(T5).png" alt="Task 5 Screenshot">
+        </section>
 
-    <h3> STEP 3.</h3>
-    <ul>
-      <li>Create a database named <code>online_courseDB</code></li>
-      <li>Use the database created</li>
-    </ul>
+        <section class="tables">
+            <h2>Table Structures</h2>
+            <h3>Table 1</h3>
+            <img src="images/FLT3-1(tbl1).png" alt="Table 1 Screenshot">
+            <h3>Table 2</h3>
+            <img src="images/FLT3-1(tbl2).png" alt="Table 2 Screenshot">
+            <h3>Table 3</h3>
+            <img src="images/FLT3-1(tbl3).png" alt="Table 3 Screenshot">
+            <h3>Table 4</h3>
+            <img src="images/FLT3-1(tbl4).png" alt="Table 4 Screenshot">
+            <h3>Table 5</h3>
+            <img src="images/FLT3-1(tbl5).png" alt="Table 5 Screenshot">
+        </section>
 
-    <h3> STEP 4.</h3>
-    <p>Import the provided SQL structure into <code>online_courseDB</code>.</p>
-
-    <h3> STEP 5.</h3>
-    <ul>
-      <li><strong>Task 1:</strong> SELECT with WHERE where <code>students_enrolled</code> < <code>enrollment_limit</code></li>
-      <li><strong>Task 2:</strong> GROUP BY + SUM by <code>category</code></li>
-      <li><strong>Task 3:</strong> WHERE <code>students_enrolled</code> = <code>enrollment_limit</code></li>
-      <li><strong>Task 4:</strong> Use <code>SUM(students_enrolled)</code></li>
-      <li><strong>Task 5:</strong> ORDER BY <code>students_enrolled</code> ASC</li>
-    </ul>
-
-    <h2> Query Statements (Screenshots)</h2>
-    <div class="floating-images">
-      <img src="images/FLT3-1(T1).png" alt="Task 1" />
-      <img src="images/FLT3-1(T2).png" alt="Task 2" />
-      <img src="images/FLT3-1(T3).png" alt="Task 3" />
-      <img src="images/FLT3-1(T4).png" alt="Task 4" />
-      <img src="images/FLT3-1(T5).png" alt="Task 5" />
+        <section class="sql-file">
+            <h2>SQL Code File</h2>
+            <p><a href="files/L.E.Turla%20(FLT3-1_Code).sql" download>Download the SQL file</a></p>
+        </section>
     </div>
 
-    <h2> Table Structures (Screenshots)</h2>
-    <div class="floating-images">
-      <img src="images/FLT3-1(tbl1).png" alt="Table 1" />
-      <img src="images/FLT3-1(tbl2).png" alt="Table 2" />
-      <img src="images/FLT3-1(tbl3).png" alt="Table 3" />
-      <img src="images/FLT3-1(tbl4).png" alt="Table 4" />
-      <img src="images/FLT3-1(tbl5).png" alt="Table 5" />
+    <div class="floating-elements">
+        <div class="star" style="animation: float 5s infinite ease-in-out;"></div>
+        <div class="star" style="animation: float 6s infinite ease-in-out;"></div>
     </div>
-
-    <h2>## SQL Copy (File)</h2>
-    <p><a href="files/L.E.Turla%20(FLT3-1_Code).sql" download>📂 L.E.Turla (Finals Lab Task 3-1 Code)</a></p>
-  </div>
 </body>
 </html>
