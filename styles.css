@@ -1,112 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #fff;
-  background: #000;
-  overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+    height: 100vh;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 1rem;
-  backdrop-filter: blur(4px);
-  animation: fadeIn 2s ease;
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
-h1, h2, h3 {
-  color: #b186f1;
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/stars.png');
+    animation: move-stars 50s linear infinite;
 }
 
-a.file-link {
-  color: #caa7ff;
-  background: rgba(255,255,255,0.1);
-  padding: 10px;
-  display: inline-block;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background 0.3s;
+.twinkling {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/twinkling.png');
+    animation: move-twinkling 100s linear infinite;
 }
 
-a.file-link:hover {
-  background: rgba(255,255,255,0.2);
+@keyframes move-stars {
+    0% { background-position: 0 0; }
+    100% { background-position: 10000px 10000px; }
 }
 
-.image-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+@keyframes move-twinkling {
+    0% { background-position: 0 0; }
+    100% { background-position: 5000px 5000px; }
 }
 
-.image-column img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.4s;
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
 }
 
-.image-column img:hover {
-  transform: scale(1.03);
+.main-heading {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
 }
 
-#stars, #twinkling {
-  position: fixed;
-  top: 0; left: 0;
-  right: 0; bottom: 0;
-  z-index: -1;
+h2, h3, h4 {
+    color: #f0f0f0;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#stars {
-  background: url("assets/stars.png") repeat;
-  animation: moveStars 200s linear infinite;
+ul {
+    list-style-type: none;
+    margin-left: 20px;
 }
 
-#twinkling {
-  background: url("assets/twinkling.png") repeat;
-  animation: moveTwinkling 150s linear infinite;
+.step, .task-list, .sql-copy {
+    margin-bottom: 40px;
 }
 
-@keyframes moveStars {
-  from { background-position: 0 0; }
-  to { background-position: -10000px 5000px; }
+.image-container {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
 }
 
-@keyframes moveTwinkling {
-  from { background-position: 0 0; }
-  to { background-position: 10000px 5000px; }
+img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-audio {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  z-index: 10;
+img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
-.cursor-trail {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #e1c0ff;
-  position: absolute;
-  pointer-events: none;
-  animation: fadeTrail 1s ease-out;
+a {
+    color: #f0f0f0;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-@keyframes fadeTrail {
-  from {
-    opacity: 1;
-    transform: scale(1.5);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.5);
-  }
+a:hover {
+    color: #ff00ff;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffcc00;
 }
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
