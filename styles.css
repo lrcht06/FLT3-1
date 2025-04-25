@@ -1,98 +1,97 @@
-/* Background effects */
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0d0221;
-  color: #fff;
-  overflow-x: hidden;
-  position: relative;
+    font-family: 'Arial', sans-serif;
+    background: #0a0a2a; /* dark background for the galaxy effect */
+    color: white;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
 }
 
-.stars, .twinkling {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: transparent url('assets/stars.png') repeat top center;
-  z-index: 0;
-  animation: moveStars 200s linear infinite;
+/* Header Section */
+header {
+    text-align: center;
+    padding: 20px;
 }
 
-.twinkling {
-  background: transparent url('assets/twinkling.png') repeat top center;
-  animation: moveTwinkling 100s linear infinite;
+/* Container for content */
+.container {
+    padding: 20px;
+}
+
+/* Process Section */
+.process ul {
+    list-style-type: none;
+}
+
+/* Image Section */
+.tasks img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Table Section */
+.tables img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Floating Elements */
+.floating-elements .star {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: floating 5s infinite linear;
+}
+
+.floating-elements .star:nth-child(2) {
+    animation-duration: 6s;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-30px) translateX(20px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Galaxy Background Animation */
+body {
+    background: url('assets/stars.png') repeat, url('assets/twinkling.png') repeat;
+    background-position: 0 0, 0 0;
+    background-size: 50%, 100%;
+    animation: moveStars 20s linear infinite, moveTwinkling 10s linear infinite;
 }
 
 @keyframes moveStars {
-  from { background-position: 0 0; }
-  to { background-position: -10000px 5000px; }
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 100% 100%, 0 0; }
 }
 
 @keyframes moveTwinkling {
-  from { background-position: 0 0; }
-  to { background-position: 10000px 0; }
+    0% { background-position: 0 0, 100% 100%; }
+    100% { background-position: 100% 100%, 0 0; }
 }
 
-/* Content styling */
-.content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 5rem auto;
-  padding: 2rem;
-  background: rgba(25, 0, 55, 0.85);
-  border-radius: 20px;
-  box-shadow: 0 0 20px 10px rgba(142, 68, 173, 0.5);
-  animation: fadeIn 2s ease-in;
-}
-
-h1, h2, h3 {
-  color: #c79cff;
-}
-
-code {
-  background: rgba(0,0,0,0.3);
-  padding: 2px 5px;
-  border-radius: 5px;
-  font-family: monospace;
-}
-
-a {
-  color: #ffaaff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  margin-left: 2rem;
-}
-
-.floating-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-  justify-content: center;
-}
-
-.floating-images img {
-  width: 150px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #d188ff;
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Audio Styling */
+audio {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
 }
