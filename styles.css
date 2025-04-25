@@ -38,13 +38,13 @@ a.file-link:hover {
 .image-column {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .image-column img {
   width: 80%;
-  border-radius: 20px;
-  transition: transform 1s;
+  border-radius: 15px;
+  transition: transform 2s;
 }
 
 .image-column img:hover {
@@ -88,7 +88,7 @@ audio {
 .cursor-trail {
   width: 8px;
   height: 8px;
-  border-radius: 70%;
+  border-radius: 90%;
   background: #e1c0ff;
   position: absolute;
   pointer-events: none;
