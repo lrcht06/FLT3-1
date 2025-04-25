@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: linear-gradient(to bottom, #2b1055, #7597de);
+  overflow-x: hidden;
+}
+
+.stars, .stars2, .stars3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent url('https://raw.githubusercontent.com/JulianLaval/canvas-space/master/stars.png') repeat top center;
+  animation: animateStars 100s linear infinite;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.stars2 {
+  background: transparent url('https://raw.githubusercontent.com/JulianLaval/canvas-space/master/stars2.png') repeat top center;
+  animation: animateStars 200s linear infinite;
+}
+
+.stars3 {
+  background: transparent url('https://raw.githubusercontent.com/JulianLaval/canvas-space/master/stars3.png') repeat top center;
+  animation: animateStars 300s linear infinite;
+}
+
+@keyframes animateStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 10000px; }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff94ff44;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #f5b4ff;
+  text-shadow: 0 0 15px #ff4dff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #d0bfff;
+}
+
+h2 {
+  color: #ffccff;
+  margin-top: 1.5rem;
+}
+
+p, li {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+code {
+  background: #ffffff10;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-family: monospace;
+  color: #ffc7ff;
+}
+
+.screenshot {
+  max-width: 100%;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
