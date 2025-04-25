@@ -1,88 +1,89 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  background: linear-gradient(to bottom, #2b1055, #7597de);
+  background: #1c1b2f;
   overflow-x: hidden;
+}
+
+.content {
+  padding: 3rem;
+  max-width: 960px;
+  margin: auto;
+  z-index: 1;
+  position: relative;
+}
+
+h1, h2 {
+  color: #d5b3ff;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #caa0f8;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.screenshot {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #aa88dd;
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 .stars, .stars2, .stars3 {
   position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background: transparent url('https://raw.githubusercontent.com/JulianLaval/canvas-space/master/stars.png') repeat top center;
-  animation: animateStars 100s linear infinite;
+  background-repeat: repeat;
+  background-size: contain;
   z-index: 0;
-  opacity: 0.7;
+  pointer-events: none;
+}
+
+.stars {
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: moveStars 200s linear infinite;
 }
 
 .stars2 {
-  background: transparent url('https://raw.githubusercontent.com/JulianLaval/canvas-space/master/stars2.png') repeat top center;
-  animation: animateStars 200s linear infinite;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.5;
+  animation: moveStars 300s linear infinite reverse;
 }
 
 .stars3 {
-  background: transparent url('https://raw.githubusercontent.com/JulianLaval/canvas-space/master/stars3.png') repeat top center;
-  animation: animateStars 300s linear infinite;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.3;
+  animation: moveStars 400s linear infinite;
 }
 
-@keyframes animateStars {
-  from { background-position: 0 0; }
-  to { background-position: -10000px 10000px; }
+@keyframes moveStars {
+  from {background-position: 0 0;}
+  to {background-position: 10000px 10000px;}
 }
 
-.content {
-  position: relative;
-  z-index: 1;
-  padding: 3rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
-  border-radius: 20px;
-  box-shadow: 0 0 20px #ff94ff44;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-h1 {
-  font-size: 3rem;
-  color: #f5b4ff;
-  text-shadow: 0 0 15px #ff4dff;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #d0bfff;
-}
-
-h2 {
-  color: #ffccff;
-  margin-top: 1.5rem;
-}
-
-p, li {
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-code {
-  background: #ffffff10;
-  padding: 2px 6px;
-  border-radius: 5px;
-  font-family: monospace;
-  color: #ffc7ff;
-}
-
-.screenshot {
-  max-width: 100%;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  margin-top: 1rem;
+audio {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
 }
