@@ -1,97 +1,80 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background: #0a0a2a; /* dark background for the galaxy effect */
-    color: white;
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1a0028;
+  color: #f0e6ff;
+  overflow-x: hidden;
 }
 
-/* Header Section */
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-/* Container for content */
 .container {
-    padding: 20px;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* Process Section */
-.process ul {
-    list-style-type: none;
+img {
+  width: 100%;
+  margin: 1rem 0;
+  border: 2px solid #f0e6ff;
+  border-radius: 8px;
 }
 
-/* Image Section */
-.tasks img {
-    width: 100%;
-    margin-bottom: 20px;
+h1, h2, h3 {
+  color: #d0aaff;
 }
 
-/* Table Section */
-.tables img {
-    width: 100%;
-    margin-bottom: 20px;
+code {
+  background: #2a003f;
+  color: #ffcbff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
 }
 
-/* Floating Elements */
-.floating-elements .star {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    animation: floating 5s infinite linear;
+hr {
+  border: 1px solid #8882;
+  margin: 2rem 0;
 }
 
-.floating-elements .star:nth-child(2) {
-    animation-duration: 6s;
+a {
+  color: #ffccff;
+  text-decoration: none;
 }
 
-@keyframes floating {
-    0% {
-        transform: translateY(0) translateX(0);
-    }
-    50% {
-        transform: translateY(-30px) translateX(20px);
-    }
-    100% {
-        transform: translateY(0) translateX(0);
-    }
+a:hover {
+  text-decoration: underline;
 }
 
-/* Galaxy Background Animation */
-body {
-    background: url('assets/stars.png') repeat, url('assets/twinkling.png') repeat;
-    background-position: 0 0, 0 0;
-    background-size: 50%, 100%;
-    animation: moveStars 20s linear infinite, moveTwinkling 10s linear infinite;
+/* Stars Background */
+.stars, .twinkling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  z-index: 0;
+}
+
+.stars {
+  background: url("assets/stardust.png") repeat;
+  animation: moveStars 200s linear infinite;
+}
+
+.twinkling {
+  background: url("assets/twinkle.png") repeat;
+  animation: twinkle 60s linear infinite;
+  opacity: 0.5;
 }
 
 @keyframes moveStars {
-    0% { background-position: 0 0, 0 0; }
-    100% { background-position: 100% 100%, 0 0; }
+  0% { background-position: 0 0; }
+  100% { background-position: -10000px 5000px; }
 }
 
-@keyframes moveTwinkling {
-    0% { background-position: 0 0, 100% 100%; }
-    100% { background-position: 100% 100%, 0 0; }
-}
-
-/* Audio Styling */
-audio {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
 }
