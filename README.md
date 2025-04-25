@@ -66,6 +66,7 @@ This portfolio demonstrates the application of MySQL SELECT Clauses to query and
 > 📂 
 [L.E.Turla (Finals Lab Task 3-1 Code)](./files/L.E.Turla%20(FLT3-1_Code).sql)
 
+
 ---
 
 
