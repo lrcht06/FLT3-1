@@ -28,7 +28,7 @@ a.file-link {
   display: inline-block;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 1s;
 }
 
 a.file-link:hover {
@@ -38,11 +38,11 @@ a.file-link:hover {
 .image-column {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .image-column img {
-  width: 100%;
+  width: 80%;
   border-radius: 20px;
   transition: transform 1s;
 }
