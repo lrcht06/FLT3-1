@@ -44,7 +44,7 @@ a.file-link:hover {
 .image-column img {
   width: 80%;
   border-radius: 15px;
-  transition: transform 2s;
+  transition: transform 1s;
 }
 
 .image-column img:hover {
@@ -88,11 +88,11 @@ audio {
 .cursor-trail {
   width: 8px;
   height: 8px;
-  border-radius: 90%;
+  border-radius: 500%;
   background: #e1c0ff;
   position: absolute;
   pointer-events: none;
-  animation: fadeTrail 3s ease-out;
+  animation: fadeTrail 5s ease-out;
 }
 
 @keyframes fadeTrail {
