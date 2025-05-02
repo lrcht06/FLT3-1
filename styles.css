@@ -5,6 +5,7 @@ body {
   color: #fff;
   background: #000;
   overflow-x: hidden;
+  text-align: justify;
 }
 
 .container {
@@ -21,6 +22,13 @@ h1, h2, h3 {
   color: #b186f1;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  border: 2px solid #b186f1;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem auto 1rem auto;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 h1.clicked, h2.clicked, h3.clicked {
@@ -36,6 +44,7 @@ a.file-link {
   border-radius: 0.5rem;
   text-decoration: none;
   transition: background 1s, transform 0.3s;
+  text-align: center;
 }
 
 a.file-link:hover {
@@ -48,6 +57,7 @@ a.file-link:hover {
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
+  align-items: center;
 }
 
 .image-column img {
@@ -138,4 +148,20 @@ audio {
 
 .contact-card a:hover {
   text-decoration: underline;
+}
+
+/* Scroll and sound click effect */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  h1, h2, h3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+
+/* Add audio for click feedback */
+.click-sound {
+  display: none;
 }
