@@ -19,6 +19,13 @@ body {
 
 h1, h2, h3 {
   color: #b186f1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+h1.clicked, h2.clicked, h3.clicked {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #caa7ff;
 }
 
 a.file-link {
@@ -28,27 +35,31 @@ a.file-link {
   display: inline-block;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: background 1s;
+  transition: background 1s, transform 0.3s;
 }
 
 a.file-link:hover {
   background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
 }
 
 .image-column {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .image-column img {
   width: 80%;
   border-radius: 15px;
-  transition: transform 1s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
 
 .image-column img:hover {
-  transform: scale(1.03);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #caa7ff;
 }
 
 #stars, #twinkling {
@@ -109,4 +120,22 @@ audio {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-card {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  line-height: 1.8;
+  color: #eee;
+}
+
+.contact-card a {
+  color: #b186f1;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
 }
