@@ -6,6 +6,8 @@ body {
   background: #000;
   overflow-x: hidden;
   text-align: justify;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -18,38 +20,45 @@ body {
   animation: fadeIn 2s ease;
 }
 
-h1, h2, h3 {
+h1, h2 {
   color: #b186f1;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  border: 2px solid #b186f1;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border: 3px double #b186f1;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
   text-align: center;
   margin: 2rem auto 1rem auto;
   width: fit-content;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.08);
+  font-weight: bold;
 }
 
-h1.clicked, h2.clicked, h3.clicked {
+h1:hover, h2:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px #caa7ff;
+  box-shadow: 0 0 15px #caa7ff;
 }
 
-a.file-link {
-  color: #caa7ff;
-  background: rgba(255,255,255,0.1);
-  padding: 10px;
-  display: inline-block;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background 1s, transform 0.3s;
-  text-align: center;
+h1:active, h2:active {
+  animation: clickZoom 0.3s ease;
 }
 
-a.file-link:hover {
-  background: rgba(255,255,255,0.2);
-  transform: scale(1.05);
+@keyframes clickZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+h3 {
+  color: #d1afff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 5px solid #caa7ff;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin: 1.5rem auto 0.5rem auto;
+  width: fit-content;
+  font-style: italic;
 }
 
 .image-column {
@@ -67,9 +76,25 @@ a.file-link:hover {
   cursor: pointer;
 }
 
-.image-column img:hover {
+.image-column img:active {
   transform: scale(1.08);
   box-shadow: 0 0 20px #caa7ff;
+}
+
+a.file-link {
+  color: #caa7ff;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  display: inline-block;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 1s, transform 0.3s;
+  text-align: center;
+}
+
+a.file-link:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
 }
 
 #stars, #twinkling {
@@ -156,7 +181,7 @@ html {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  h1, h2, h3 {
+  h1, h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 }
@@ -164,4 +189,16 @@ html {
 /* Add audio for click feedback */
 .click-sound {
   display: none;
+}
+
+p, li {
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+}
+
+/* JavaScript helper classes */
+section:target {
+  scroll-margin-top: 150px;
 }
