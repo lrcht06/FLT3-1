@@ -32,21 +32,7 @@ h1, h2 {
   width: fit-content;
   background-color: rgba(255, 255, 255, 0.08);
   font-weight: bold;
-}
-
-h1:hover, h2:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #caa7ff;
-}
-
-h1:active, h2:active {
-  animation: clickZoom 0.3s ease;
-}
-
-@keyframes clickZoom {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
+  scroll-margin-top: 20vh;
 }
 
 h3 {
@@ -59,6 +45,16 @@ h3 {
   margin: 1.5rem auto 0.5rem auto;
   width: fit-content;
   font-style: italic;
+}
+
+h1:hover, h2:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #caa7ff;
+}
+
+h1:active, h2:active {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px #d9bfff;
 }
 
 .image-column {
@@ -74,11 +70,12 @@ h3 {
   border-radius: 15px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
+  border: 2px solid #b186f1;
 }
 
 .image-column img:active {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px #caa7ff;
+  transform: scale(1.15);
+  box-shadow: 0 0 25px #caa7ff, 0 0 15px #b186f1 inset;
 }
 
 a.file-link {
@@ -175,7 +172,6 @@ audio {
   text-decoration: underline;
 }
 
-/* Scroll and sound click effect */
 html {
   scroll-behavior: smooth;
 }
@@ -186,19 +182,33 @@ html {
   }
 }
 
-/* Add audio for click feedback */
+p, li {
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Click sound effect */
 .click-sound {
   display: none;
 }
 
-p, li {
-  color: #ddd;
-  line-height: 1.8;
-  font-size: 1rem;
-  letter-spacing: 0.4px;
-}
-
-/* JavaScript helper classes */
-section:target {
-  scroll-margin-top: 150px;
-}
+/* JavaScript required for scroll centering and click audio */
+/*
+<script>
+  const sound = new Audio('assets/click.mp3');
+  document.querySelectorAll('h1, h2').forEach(header => {
+    header.addEventListener('click', () => {
+      header.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      sound.currentTime = 0;
+      sound.play();
+    });
+  });
+</script>
+*/
