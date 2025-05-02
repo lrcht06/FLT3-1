@@ -74,8 +74,8 @@ h1:active, h2:active {
 }
 
 .image-column img:active {
-  transform: scale(1.15);
-  box-shadow: 0 0 25px #caa7ff, 0 0 15px #b186f1 inset;
+  transform: scale(1.2);
+  box-shadow: 0 0 30px #d1afff, 0 0 20px #b186f1 inset;
 }
 
 a.file-link {
@@ -99,26 +99,28 @@ a.file-link:hover {
   top: 0; left: 0;
   right: 0; bottom: 0;
   z-index: -1;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
 }
 
 #stars {
-  background: url("assets/stars.png") repeat;
+  background-image: url("assets/stars.png");
   animation: moveStars 200s linear infinite;
 }
 
 #twinkling {
-  background: url("assets/twinkling.png") repeat;
+  background-image: url("assets/twinkling.png");
   animation: moveTwinkling 150s linear infinite;
 }
 
 @keyframes moveStars {
   from { background-position: 0 0; }
-  to { background-position: -10000px 5000px; }
+  to { background-position: -2000px 1000px; }
 }
 
 @keyframes moveTwinkling {
   from { background-position: 0 0; }
-  to { background-position: 10000px 5000px; }
+  to { background-position: 2000px 1000px; }
 }
 
 audio {
@@ -185,13 +187,14 @@ html {
 p, li {
   color: #ddd;
   line-height: 1.8;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0.5px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.04);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
 /* Click sound effect */
@@ -200,15 +203,15 @@ p, li {
 }
 
 /* JavaScript required for scroll centering and click audio */
-/*
 <script>
-  const sound = new Audio('assets/click.mp3');
-  document.querySelectorAll('h1, h2').forEach(header => {
-    header.addEventListener('click', () => {
-      header.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      sound.currentTime = 0;
-      sound.play();
+  document.addEventListener('DOMContentLoaded', () => {
+    const sound = new Audio('assets/click.mp3');
+    document.querySelectorAll('h1, h2').forEach(header => {
+      header.addEventListener('click', () => {
+        header.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        sound.currentTime = 0;
+        sound.play();
+      });
     });
   });
 </script>
-*/
